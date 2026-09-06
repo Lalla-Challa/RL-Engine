@@ -5,7 +5,7 @@
  * better-sqlite3-multiple-ciphers, `pragma key = "x'<hex>'"`,
  * journal_mode = WAL, busy_timeout = 5000, and scrypt-based key derivation
  * from auth.json (keySalt + PIN, N=4096) — the same scheme as the parent's
- * server/db.ts and engine-core/db-connection.ts.
+ * server/db.ts of the parent SQLCipher driver.
  *
  * The driver is resolved lazily so the rest of the engine (and every other
  * pack/pipeline run) works with zero native dependencies.

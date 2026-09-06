@@ -1,14 +1,14 @@
 # Migration Notes — from the legacy CCM engine to rl-engine
 
-`engine-core/` (the CCM/CCE story engine) is **frozen** — see [`engine-core/FROZEN.md`](../engine-core/FROZEN.md). This document maps every legacy concept to its successor in `rl-engine/` so migration is a table-lookup, not an archaeology dig.
+The legacy CCM/CCE story engine is no longer bundled; the architecture spec it was frozen against lives at [`docs/engine-architecture-specification.md`](engine-architecture-specification.md). This document maps every legacy concept to its successor in `rl-engine/` so migration is a table-lookup, not an archaeology dig.
 
 ## 1. The one-line summary
 
-The CCM engine was a *story simulator with domain concepts baked in* (actors, narrative weight, scene skeletons). `rl-engine` is the same deterministic kernel with the domain extracted into declarative specs — the architecture spec (`engine-core/Generic Reinforcement Learning Environment Engine — Software Architecture Specification.md`) executed: §1–47, with the old story domain now just one pack among three.
+The CCM engine was a *story simulator with domain concepts baked in* (actors, narrative weight, scene skeletons). `rl-engine` is the same deterministic kernel with the domain extracted into declarative specs — the architecture spec ([`docs/engine-architecture-specification.md`](engine-architecture-specification.md)) executed: §1–47, with the old story domain now just one pack among three.
 
 ## 2. Concept mapping
 
-| Legacy CCM (`engine-core/ccm/`) | rl-engine | Notes |
+| Legacy CCM concept | rl-engine successor | Notes |
 |---|---|---|
 | `Actor {attributes, state, goals, drives, habits, plans, beliefs, knowledge}` | `Entity {id, type, attributes, state}` + spec-defined fields | The typed personality fields were domain concepts; they become ordinary spec-declared state. See the hospital pack's `entities`. |
 | `Environment` / `SystemDef` (world model) | `Entity` (type `"location"` etc.) | No special-cased scopes — rules target whatever the spec declares. |
@@ -48,5 +48,5 @@ The CCM engine was a *story simulator with domain concepts baked in* (actors, na
 | Active engine | `rl-engine/` (see `rl-engine/README.md`) |
 | Domain packs (incl. the hospital world) | `rl-engine/domain-packs/` |
 | Benchmark + grader | `benchmark/` (see `docs/benchmark-guide.md`) |
-| Frozen legacy engine | `engine-core/` (read-only reference) |
+| Frozen legacy engine | removed from the tree (git history / prior release keeps it) |
 | Parent app | `D:\story-vault` — still runs its own `server/ccm` copy until integration |

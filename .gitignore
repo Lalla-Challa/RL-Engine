@@ -8,9 +8,6 @@ node_modules/
 # ── Build artifacts ──────────────────────────────────────────────────────────
 # rl-engine package build (regenerate via the dist build; package main/types point here)
 rl-engine/dist/
-# legacy engine-core build outputs
-engine-core/mcp-npm/dist/
-engine-core/mcp-python/dist/
 *.tsbuildinfo
 
 # ── Runtime state (engine sessions, dossiers, traces) ───────────────────────

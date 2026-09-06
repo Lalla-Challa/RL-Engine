@@ -11,7 +11,7 @@ Deterministic (seeded, replayable, hash-verified), atomic (invalid actions never
 | `rl-engine/` | The engine: `core/` (state, rules, transitions, validation, randomness), `environment/` (runtime, compiler, validator, snapshots), `observation/`, `reward/`, `episode/`, `events/`, `persistence/`, `rl/` (trainer seam), `api/` (MCP server, provenance), `testing/` (gates), `domain-packs/` (8 declarative packs) |
 | `benchmark/` | The scored commissioning benchmark: forensic grader, golden + broken fixtures, reference agent, task brief |
 | `docs/` | Tutorial, benchmark author guide, migration notes |
-| `engine-core/` | Legacy CCM/CCE story engine kept as a frozen reference mirror (not part of the new engine) |
+| `docs/engine-architecture-specification.md` | The Software Architecture Specification (§1–47) the engine implements |
 | `RedTeamTest/` | Authorized red-team engagement: consolidated report + reusable harness (`report.md` is the entry point) |
 | `roadmap.md` | Living roadmap — phases with exit criteria, no timelines |
 | `VERSIONING.md` | Semver for the engine, content hashes for frozen artifacts, the Rule-4B core ledger |

@@ -1,6 +1,6 @@
 # rl-engine — Generic Reinforcement Learning Environment Engine
 
-A domain-independent engine for creating and executing reinforcement-learning environments from **declarative specifications**. Implements the Software Architecture Specification v1.0 (`engine-core/Generic Reinforcement Learning Environment Engine — Software Architecture Specification.md`, §1–47).
+A domain-independent engine for creating and executing reinforcement-learning environments from **declarative specifications**. Implements the Software Architecture Specification v1.0 (`docs/engine-architecture-specification.md`, §1–47).
 
 The engine owns **what happens**. The RL algorithm owns **learning what to do**. Environments are JSON specs — never engine-source changes.
 
@@ -55,7 +55,3 @@ node --import tsx rl-engine/testing/smoke.ts        # from a checkout that provi
 ```
 
 The smoke proves: compiler defect detection (exactly 4 `unknown_target`), atomic invalid-action rejection, terminated + truncated episodes, ≥100 real `step()` calls, partial observability (`Observation ⊂ State`), reward composition (`R = Σ component × weight`), byte-identical replay, and dossier filing + grading.
-
-## Relationship to engine-core
-
-`engine-core/ccm/` (the CCM story engine) remains untouched as the legacy reference. The story domain now lives as `domain-packs/harmon-creek/spec.json` — a declarative spec with zero `ccm/` imports. New domains (logistics, trading, scheduling) are new spec files, not new harnesses.

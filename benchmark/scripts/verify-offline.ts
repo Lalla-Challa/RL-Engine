@@ -14,7 +14,7 @@ const checks: [string, boolean][] = [
   ["reference domain pack (rl-engine/domain-packs/harmon-creek/spec.json)", existsSync(path.join(ROOT, "rl-engine/domain-packs/harmon-creek/spec.json"))],
   ["grader (benchmark/grader/grader.ts)", existsSync(path.join(ROOT, "benchmark/grader/grader.ts"))],
   ["task prompt (benchmark/tasks/task.md)", existsSync(path.join(ROOT, "benchmark/tasks/task.md"))],
-  ["frozen legacy reference (engine-core/ccm/rng.ts — FROZEN, see engine-core/FROZEN.md)", existsSync(path.join(ROOT, "engine-core/ccm/rng.ts"))],
+  ["architecture specification (docs/engine-architecture-specification.md)", existsSync(path.join(ROOT, "docs/engine-architecture-specification.md"))],
   ["license (benchmark/LICENSE.md)", existsSync(path.join(ROOT, "benchmark/LICENSE.md"))],
   ["data license (benchmark/DATA_LICENSE.md)", existsSync(path.join(ROOT, "benchmark/DATA_LICENSE.md"))],
   ["CI workflow (.github/workflows/ci.yml)", existsSync(path.join(ROOT, ".github/workflows/ci.yml"))],

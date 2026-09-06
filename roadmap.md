@@ -32,6 +32,8 @@ A Senior Technical Evaluator / Procurement Auditor review graded this deliverabl
 
 ## 2. Where we are right now
 
+> **Tree note (2026-09-06):** `engine-core/` (the legacy CCM/CCE reference mirror, which bundled the vendor's public `story-vault-mcp` packages) has been **removed from the repository** to keep the artifact self-contained. The architecture specification it hosted now lives at `docs/engine-architecture-specification.md`; historical mentions of `engine-core/` below describe superseded states.
+
 ### Shipped and verified
 
 | Area | State |

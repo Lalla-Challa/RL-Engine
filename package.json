@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "CMM-CME workspace: rl-engine (generic RL environment engine) + benchmark (scored commissioning scenario) + engine-core (legacy CCM story engine, reference).",
+  "description": "CMM-CME workspace: rl-engine (generic RL environment engine) + benchmark (scored commissioning scenario).",
   "license": "MIT",
   "scripts": {
     "smoke": "node --import tsx rl-engine/testing/smoke.ts",

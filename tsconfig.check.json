@@ -7,7 +7,9 @@
     "noEmit": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "rl-engine/**/*.ts",
@@ -15,7 +17,6 @@
     "docs/examples/**/*.ts"
   ],
   "exclude": [
-    "engine-core",
     "rl-engine/dist",
     "vendor"
   ]

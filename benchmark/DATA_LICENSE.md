@@ -6,7 +6,7 @@ You may share and adapt the scenario data for any purpose, including commercial 
 
 > Harmon Creek Regional Hospital scenario — derived from the Causal Continuity Model (CCM) framework, Copyright (c) 2026 Faisal Iqbal. Licensed CC-BY-4.0.
 
-The underlying engine code in `engine-core/ccm/`, `engine-core/db/`, `engine-core/mcp.ts`, and the CCM framework text in `engine-core/docs/CCM.md` remain under the MIT License (see `benchmark/LICENSE.md`).
+The benchmark scenario derives from the vendor's earlier CCM framework (MIT, see `benchmark/LICENSE.md`).
 
 All actor names, clinical roles, and facility details are synthetic. No real patient, client, or employee data is included.
 

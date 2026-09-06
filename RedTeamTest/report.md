@@ -66,6 +66,8 @@ The agent attacks **common-sense compliance gates** through the tool protocol on
 
 ## 2. Performance
 
+**Probe counts, verbatim: Run 1 executed 26 bypass probes; Run 2 executed 26 bypass probes. Each run also executed 5 legal controls and 1 weak-spec tamper. The two runs used independent seeds (Run 1: 42/100/202/303; Run 2: 77/111/303/313).**
+
 - **52 bypass probes across 2 runs** (26 + 26, independent seeds), 5 legal controls per run, 1 weak-spec tamper per run.
 - **Run 1: 25/26 enforced** (96%) — enforcement was rule-condition gating (the workhorse), `action_validation` for unknown actions, the episode-boundary guard, and atomic constraint enforcement.
 - **Run 2: 26/26 enforced** (100%) — the Phase I patches closed the one gap, under seeds that had never been tried.
