@@ -21,7 +21,7 @@ if [ ! -f "$TSX" ]; then
   TSX="vendor/node_modules/tsx/dist/cli.mjs"
 fi
 if [ ! -f "$TSX" ]; then
-  echo "✗ tsx loader not found. Run: (cd vendor && npm install --offline) or npm i tsx"
+  echo "✗ tsx loader not found. One-time toolchain install: npm ci --prefix vendor"
   exit 1
 fi
 echo "── loader: $TSX"

@@ -27,9 +27,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: vendor/package-lock.json
 
-      - name: Restore vendored toolchain (non-Windows)
-        if: runner.os != 'Windows'
+      - name: Install toolchain (tsx + typescript from the committed lockfile)
         run: npm ci --prefix vendor
 
       - name: Version report (build provenance)
@@ -37,7 +38,7 @@ jobs:
         shell: bash
 
       - name: Type check (tsc --strict, whole workspace)
-        run: node node_modules/typescript/bin/tsc -p tsconfig.check.json
+        run: node vendor/node_modules/typescript/bin/tsc -p tsconfig.check.json
 
       - name: Core integrity (Rule 4B ledger)
         run: node "$TSX" rl-engine/testing/core-integrity.ts
@@ -104,6 +105,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: vendor/package-lock.json
+      - name: Install toolchain
+        run: npm ci --prefix vendor
       - name: Tamper drill (broken determinism must fail the gate)
         run: node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/negative-gate.ts --drill
         shell: cmd

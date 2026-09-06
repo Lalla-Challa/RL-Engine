@@ -12,7 +12,7 @@ No API keys. No network. No LLM required (a headless scripted reference agent is
 
 The cycle: offline readiness check → headless reference agent runs the golden loop over **real MCP stdio JSON-RPC** and files a dossier → grader scores it → golden fixture classification (perfect dossier = 100/100; every broken fixture = its exact named failure code).
 
-**Offline install note:** the only runtime dependency is the `tsx` TypeScript loader, vendored in `vendor/node_modules/` and committed. After cloning, nothing is downloaded — `run_benchmark.sh` uses the vendored loader and works air-gapped. (One-time setup if you ever need to re-vendor: `cd vendor && npm install --offline`.)
+**Toolchain note:** the engine has zero runtime dependencies. The development toolchain (tsx loader + typescript) installs once from the committed lockfile: `npm ci --prefix vendor`. The grading cycle itself makes no network calls.
 
 ## How the brief's must-haves are satisfied
 
@@ -25,7 +25,7 @@ The cycle: offline readiness check → headless reference agent runs the golden 
 | Named failure modes from real evidence | 7 codes + bluff detection, each derived from dossier forensics — see table below. | `scores.json → failures[]` |
 | No shortcut / anti-bluff | SHA-256 echo detection (dossier spec identical to the seeded starter/reference = cheated), state-novelty scoring (fabricated repetition), and **claim verification**: any causal chain the dossier claims must exist edge-by-edge in the recorded event graph. | `scores.json → antiBluff`, `details.bluffChain` |
 | Everything graded is discoverable | The grader reads only files inside the dossier + the repo's own reference spec and checklist. No hidden oracle. | `benchmark/grader/grader.ts` |
-| Self-contained and offline | Engine is dependency-free; tsx vendored; no network calls anywhere in the cycle. | `run_benchmark.sh` |
+| Self-contained and offline | Engine is dependency-free; grading cycle makes no network calls; toolchain installs from the committed lockfile. | `run_benchmark.sh` |
 | Pseudonymised data | All actors/roles/places are synthetic (Mara, Finn, Kael, Harmon Creek…). No real patient/client/employee data. | `benchmark/scenario/spec.json` |
 | Documented rights | Engine + harness MIT; scenario + fixtures CC-BY-4.0. Full audit below. | `LICENSE.md`, `DATA_LICENSE.md` |
 
@@ -48,8 +48,8 @@ The cycle: offline readiness check → headless reference agent runs the golden 
 ## Fixtures (checked in, regenerable)
 
 ```bash
-node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/build-fixtures.ts   # regenerate
-node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/test-fixtures.ts    # classify
+npm run --silent packs   # or: node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/build-fixtures.ts   # regenerate
+npm run --silent packs   # or: node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/test-fixtures.ts    # classify
 ```
 
 | Fixture | Expected result |
@@ -95,7 +95,7 @@ benchmark/
 The engine exposes an MCP server (stdio, JSON-RPC 2.0, zero dependencies):
 
 ```bash
-node vendor/node_modules/tsx/dist/cli.mjs rl-engine/api/mcpServer.ts
+npm run --silent packs   # or: node vendor/node_modules/tsx/dist/cli.mjs rl-engine/api/mcpServer.ts
 ```
 
 Tools: `env_list_specs`, `env_get_specification`, `env_compile`, `env_save_spec`, `env_use_spec`, `env_step`, `env_reset`, `env_get_action_space`, `env_get_observation_space`, `env_get_state`, `env_get_events`, `env_trajectory`, `env_file_dossier`. The task prompt your agent should follow is `tasks/task.md`.

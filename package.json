@@ -6,17 +6,17 @@
   "description": "CMM-CME workspace: rl-engine (generic RL environment engine) + benchmark (scored commissioning scenario).",
   "license": "MIT",
   "scripts": {
-    "smoke": "node --import tsx rl-engine/testing/smoke.ts",
-    "determinism": "node --import tsx rl-engine/testing/determinism-gate.ts",
-    "mcp": "node --import tsx rl-engine/api/mcpServer.ts",
-    "golden-loop": "node --import tsx rl-engine/testing/mcp-golden-loop.ts",
-    "cross-process": "node --import tsx rl-engine/testing/cross-process-replay.ts",
-    "roundtrip": "node --import tsx rl-engine/testing/trainer-roundtrip.ts",
-    "demo": "node --import tsx rl-engine/testing/learning-demo.ts",
-    "packs": "node --import tsx rl-engine/testing/pack-pipeline.ts",
-    "build-scenario": "node --import tsx benchmark/scripts/build-scenario.ts",
-    "verify-offline": "node --import tsx benchmark/scripts/verify-offline.ts",
-    "grade": "node --import tsx benchmark/scripts/grade.ts"
+    "smoke": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/smoke.ts",
+    "determinism": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/determinism-gate.ts",
+    "mcp": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/api/mcpServer.ts",
+    "golden-loop": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/mcp-golden-loop.ts",
+    "cross-process": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/cross-process-replay.ts",
+    "roundtrip": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/trainer-roundtrip.ts",
+    "demo": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/learning-demo.ts",
+    "packs": "node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/pack-pipeline.ts",
+    "build-scenario": "node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/build-scenario.ts",
+    "verify-offline": "node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/verify-offline.ts",
+    "grade": "node vendor/node_modules/tsx/dist/cli.mjs benchmark/scripts/grade.ts"
   },
   "engines": {
     "node": ">=22"

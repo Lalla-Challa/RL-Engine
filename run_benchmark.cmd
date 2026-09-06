@@ -9,7 +9,7 @@ cd /d "%~dp0"
 set "TSX=node_modules\tsx\dist\cli.mjs"
 if not exist "%TSX%" set "TSX=vendor\node_modules\tsx\dist\cli.mjs"
 if not exist "%TSX%" (
-  echo tsx loader not found. Run: cd vendor ^&^& npm install --offline
+  echo tsx loader not found. One-time toolchain install: npm ci --prefix vendor
   exit /b 1
 )
 echo -- loader: %TSX%

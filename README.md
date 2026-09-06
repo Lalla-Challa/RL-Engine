@@ -2,7 +2,7 @@
 
 A **domain-independent reinforcement-learning environment engine** and a **buyer-ready scored benchmark** built on it. Any domain — logistics, trading, healthcare, insurance, legal, HR — is a declarative JSON **spec**, never a new harness: `EnvironmentSpecification → compiler → sandboxed runtime → reset()/step(action)` with atomic transitions, 6-layer validation, composable rewards, partial observability, and deterministic replay (Software Architecture Specification v1.0, §1–47).
 
-Deterministic (seeded, replayable, hash-verified), atomic (invalid actions never mutate state), offline (zero runtime dependencies, vendored toolchain), and persistence-outside-kernel.
+Deterministic (seeded, replayable, hash-verified), atomic (invalid actions never mutate state), zero runtime dependencies (one-time dev-toolchain install from a committed lockfile; the grading cycle makes no network calls), and persistence-outside-kernel.
 
 ## Repository layout
 
@@ -29,11 +29,14 @@ Runs a full grading cycle: offline readiness check → headless reference agent 
 You write a JSON `EnvironmentSpecification`: a typed state schema, entities/relationships, an action space (discrete, parameterized, continuous, multiDiscrete, conditional), rules with composable conditions and effects (including declarative `$field`/`$mul`/`$sub` math), range/forbidden constraints, partial observations, weighted reward components, and termination. The compiler validates it (unknown targets, impossible probabilities, circular references — before training ever starts); the runtime executes `reset()/step()` through an atomic clone → validate → commit-or-discard pipeline where rejections name their §15 validation layer. Same spec + seed + actions → byte-identical trajectory, hash-verifiable.
 
 ```bash
+# One-time toolchain install (tsx loader + typescript, from the committed lockfile)
+npm ci --prefix vendor
+
 # Drive it over MCP (JSON-RPC 2.0 stdio, 13 env_* tools — zero dependencies)
-node --import tsx rl-engine/api/mcpServer.ts
+node vendor/node_modules/tsx/dist/cli.mjs rl-engine/api/mcpServer.ts
 # Or run the full test battery
-node --import tsx rl-engine/testing/smoke.ts
-node --import tsx rl-engine/testing/pack-pipeline.ts        # all 8 packs: compile → smoke → determinism → properties → grade
+node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/smoke.ts
+node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/pack-pipeline.ts   # all 8 packs: compile → smoke → determinism → properties → grade
 ```
 
 ## Domain packs (8)

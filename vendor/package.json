@@ -2,9 +2,11 @@
   "name": "cmm-cme-vendor",
   "version": "1.0.0",
   "private": true,
-  "description": "Offline dependencies vendored for the benchmark (tsx loader). No network needed after clone.",
-  "license": "MIT",
+  "description": "Development toolchain for the CMM-CME workspace (tsx loader + typescript). Install once: npm ci --prefix vendor",
   "dependencies": {
     "tsx": "^4.23.13"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

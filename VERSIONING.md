@@ -20,7 +20,7 @@ The engine **spec format** version is separate: `SUPPORTED_SPEC_VERSION` in `rl-
 
 Scenarios, domain packs, golden fixtures, and dossiers are **immutable data**. They are versioned by SHA-256 content hash, not by semver:
 
-- Each pack's identity is `environment.id@environment.version` plus the SHA-256 of its `spec.json` (canonical serialization; printed by `version-report.ts`).
+- Each pack's identity is `environment.id` plus its `environment.version`, plus the SHA-256 of its `spec.json` (canonical serialization; printed by `version-report.ts`).
 - The benchmark starter hash is recorded in `benchmark/scenario/scenario.json` (`starterHash`, written by `build-scenario.ts`).
 - **Never edit a frozen artifact that fixtures or dossiers reference** — bump its `environment.version` and regenerate dependents instead. Editing content without a version bump is treated as tampering by the grader (echo/replay checks).
 
