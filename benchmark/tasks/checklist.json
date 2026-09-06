@@ -1,11 +1,1 @@
-{
-  "minStepCalls": 100,
-  "requiredActions": ["admit_patient", "discharge_patient"],
-  "requireInvalidActionRejected": true,
-  "requireTermination": true,
-  "requireObservationSubset": true,
-  "requireRewardComponents": true,
-  "requireReplay": true,
-  "deliberateDefects": 4,
-  "minTrajectoryLength": 40
-}
+{"minStepCalls":100,"requiredActions":["admit_patient","discharge_patient"],"requireInvalidActionRejected":true,"requireTermination":true,"requireObservationSubset":true,"requireRewardComponents":true,"requireReplay":true,"deliberateDefects":4,"minTrajectoryLength":40}
