@@ -1,0 +1,28 @@
+# Normalize line endings on commit; checkout per-OS default.
+* text=auto
+
+# Force LF for everything that crosses platforms in tests/CI (Windows + ubuntu
+# matrix). Deterministic hashing of specs/fixtures demands byte-stable files —
+# a CRLF flip would change fixture and content hashes.
+*.ts   text eol=lf
+*.mts  text eol=lf
+*.mjs  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.sh   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.css  text eol=lf
+
+# Windows-only helpers keep CRLF
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binaries (vendored toolchain + prebuilds) are never normalized
+*.node binary
+*.wasm binary
+*.png  binary
+*.jpg  binary
+*.ico  binary

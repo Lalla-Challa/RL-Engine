@@ -1,0 +1,370 @@
+{
+  "environment": {
+    "id": "harmon-creek-hospital",
+    "version": "1.0.0",
+    "specVersion": "1.0",
+    "description": "Harmon Creek Regional Hospital — synthetic commissioning scenario on the generic RL environment engine. 10 entities (8 synthetic actors + 2 wards), 2 relationships, 4 action-conditioned rules, range constraints and reward composition. No real patient or employee data."
+  },
+  "state": {
+    "ward_occupancy": {
+      "type": "integer",
+      "min": 0,
+      "max": 12,
+      "default": 0
+    },
+    "battery": {
+      "type": "float",
+      "min": 0,
+      "max": 100,
+      "default": 100
+    },
+    "supplies": {
+      "type": "float",
+      "min": 0,
+      "max": 100,
+      "default": 50
+    },
+    "day": {
+      "type": "integer",
+      "min": 0,
+      "max": 30,
+      "default": 0
+    }
+  },
+  "entities": [
+    {
+      "id": "mara",
+      "type": "actor",
+      "attributes": {
+        "role": "captain"
+      },
+      "state": {
+        "location": "Harbor",
+        "energy": "high"
+      }
+    },
+    {
+      "id": "finn",
+      "type": "actor",
+      "attributes": {
+        "role": "fisher"
+      },
+      "state": {
+        "location": "Harbor",
+        "energy": "medium"
+      }
+    },
+    {
+      "id": "kael",
+      "type": "actor",
+      "attributes": {
+        "role": "merchant"
+      },
+      "state": {
+        "location": "TownSquare",
+        "energy": "high"
+      }
+    },
+    {
+      "id": "lyra",
+      "type": "actor",
+      "attributes": {
+        "role": "healer"
+      },
+      "state": {
+        "location": "Infirmary",
+        "energy": "low"
+      }
+    },
+    {
+      "id": "orin",
+      "type": "actor",
+      "attributes": {
+        "role": "elder"
+      },
+      "state": {
+        "location": "TownSquare",
+        "energy": "medium"
+      }
+    },
+    {
+      "id": "rina",
+      "type": "actor",
+      "attributes": {
+        "role": "messenger"
+      },
+      "state": {
+        "location": "TownSquare",
+        "energy": "high"
+      }
+    },
+    {
+      "id": "sorin",
+      "type": "actor",
+      "attributes": {
+        "role": "guard"
+      },
+      "state": {
+        "location": "TownSquare",
+        "energy": "high"
+      }
+    },
+    {
+      "id": "tessa",
+      "type": "actor",
+      "attributes": {
+        "role": "innkeeper"
+      },
+      "state": {
+        "location": "Inn",
+        "energy": "high"
+      }
+    },
+    {
+      "id": "ward_a",
+      "type": "environment",
+      "attributes": {
+        "capacity": 12
+      },
+      "state": {
+        "occupancy": 0
+      }
+    },
+    {
+      "id": "ward_b",
+      "type": "environment",
+      "attributes": {
+        "capacity": 8
+      },
+      "state": {
+        "occupancy": 0
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "mara-finn",
+      "source": "mara",
+      "target": "finn",
+      "type": "colleague",
+      "state": {
+        "trust": "high"
+      }
+    },
+    {
+      "id": "finn-kael",
+      "source": "finn",
+      "target": "kael",
+      "type": "acquaintance",
+      "state": {
+        "trust": "medium"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "kind": "discrete",
+      "actions": [
+        "admit_patient",
+        "discharge_patient",
+        "transfer_patient",
+        "inspect_ward",
+        "restock",
+        "move"
+      ]
+    },
+    {
+      "kind": "parameterized",
+      "type": "move",
+      "params": {
+        "direction": {
+          "type": "string",
+          "allowedValues": [
+            "north",
+            "south",
+            "east",
+            "west"
+          ]
+        }
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "admit_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "admit_patient"
+        },
+        {
+          "field": "ward_occupancy",
+          "op": "lt",
+          "value": 12
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "ward_occupancy",
+          "op": "increment",
+          "value": 1
+        },
+        {
+          "target": "state",
+          "field": "battery",
+          "op": "subtract",
+          "value": 0.5
+        }
+      ],
+      "priority": 10,
+      "probability": 0.9,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "discharge_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "discharge_patient"
+        },
+        {
+          "field": "ward_occupancy",
+          "op": "gt",
+          "value": 0
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "ward_occupancy",
+          "op": "decrement",
+          "value": 1
+        }
+      ],
+      "priority": 5,
+      "probability": 0.8,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "restock_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "restock"
+        },
+        {
+          "field": "supplies",
+          "op": "lt",
+          "value": 100
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "supplies",
+          "op": "set",
+          "value": 100
+        },
+        {
+          "target": "state",
+          "field": "battery",
+          "op": "subtract",
+          "value": 1
+        }
+      ],
+      "priority": 7,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "transfer_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "transfer_patient"
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "day",
+          "op": "increment",
+          "value": 1
+        }
+      ],
+      "priority": 3,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    }
+  ],
+  "observations": {
+    "fields": [
+      {
+        "field": "ward_occupancy",
+        "source": "ward_occupancy",
+        "visibility": "public"
+      },
+      {
+        "field": "battery",
+        "source": "battery",
+        "visibility": "public"
+      }
+    ],
+    "fullyObservable": false
+  },
+  "rewards": {
+    "components": [
+      {
+        "id": "occupancy_reward",
+        "expression": "state.ward_occupancy",
+        "weight": 1
+      },
+      {
+        "id": "battery_cost",
+        "expression": "state.battery - prevState.battery",
+        "weight": 0.1
+      }
+    ]
+  },
+  "constraints": [
+    {
+      "id": "supplies_floor",
+      "type": "range",
+      "target": {
+        "field": "supplies",
+        "min": 0,
+        "max": 100
+      },
+      "priority": 1,
+      "satisfied": false
+    }
+  ],
+  "termination": [
+    {
+      "field": "ward_occupancy",
+      "op": "gte",
+      "value": 12,
+      "kind": "terminated"
+    },
+    {
+      "field": "",
+      "op": "eq",
+      "value": 0,
+      "kind": "truncated",
+      "maxSteps": 100
+    }
+  ]
+}

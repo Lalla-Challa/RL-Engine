@@ -1,0 +1,21 @@
+{
+  "spec_id": "fixed",
+  "specIdentity": "harmon-creek-hospital@1.0.0",
+  "episodes": [
+    {
+      "seed": 42,
+      "steps": 21
+    },
+    {
+      "seed": 42,
+      "steps": 100
+    }
+  ],
+  "claimedChains": [],
+  "provenance": {
+    "signed": true,
+    "algorithm": "HMAC-SHA256",
+    "chainHead": "4762ec11a7fea1386f28e92485885fbed9d101e935657951a0f05e64f4bb226d",
+    "entries": 127
+  }
+}

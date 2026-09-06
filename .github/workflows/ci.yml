@@ -1,0 +1,109 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gates:
+    # Phase H (F5): matrix across OS families. Windows uses the committed
+    # vendored toolchain binaries; ubuntu restores the vendor lockfile
+    # (platform-specific esbuild binary) — still no public registry.
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      TSX: vendor/node_modules/tsx/dist/cli.mjs
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Restore vendored toolchain (non-Windows)
+        if: runner.os != 'Windows'
+        run: npm ci --prefix vendor
+
+      - name: Version report (build provenance)
+        run: node "$TSX" rl-engine/testing/version-report.ts
+        shell: bash
+
+      - name: Type check (tsc --strict, whole workspace)
+        run: node node_modules/typescript/bin/tsc -p tsconfig.check.json
+
+      - name: Core integrity (Rule 4B ledger)
+        run: node "$TSX" rl-engine/testing/core-integrity.ts
+        shell: bash
+
+      - name: Offline readiness
+        run: node "$TSX" benchmark/scripts/verify-offline.ts
+        shell: bash
+
+      - name: Engine smoke (reset/step/atomicity/determinism/properties)
+        run: node "$TSX" rl-engine/testing/smoke.ts
+        shell: bash
+
+      - name: Determinism gate (trajectory hashes, 2 runs × 3 seeds)
+        run: node "$TSX" rl-engine/testing/determinism-gate.ts
+        shell: bash
+
+      - name: Golden fixture classification (Phase C grader)
+        run: node "$TSX" benchmark/scripts/test-fixtures.ts
+        shell: bash
+
+      - name: Domain packs pipeline (3 domains + hardened variant)
+        run: node "$TSX" rl-engine/testing/pack-pipeline.ts
+        shell: bash
+
+      - name: Trainer checkpoint round-trip
+        run: node "$TSX" rl-engine/testing/trainer-roundtrip.ts
+        shell: bash
+
+      - name: Cross-process replay (state-hash identity across process boundary)
+        run: node "$TSX" rl-engine/testing/cross-process-replay.ts
+        shell: bash
+
+      - name: MCP golden loop (protocol-level agent run + grading)
+        run: node "$TSX" rl-engine/testing/mcp-golden-loop.ts
+        shell: bash
+
+      - name: Learning demo (reward informativeness)
+        run: node "$TSX" rl-engine/testing/learning-demo.ts
+        shell: bash
+
+      - name: Sandbox security + provenance pass (negative gate)
+        run: node "$TSX" rl-engine/testing/negative-gate.ts
+        shell: bash
+
+      - name: Tutorial example runs
+        run: node "$TSX" docs/examples/toy-thermostat.ts
+        shell: bash
+
+      - name: Build standalone dist
+        run: node "$TSX" rl-engine/build-dist.mts
+        shell: bash
+
+  tamper-drill:
+    # DoD #1 proof of enforcement: intentionally breaks determinism + a golden
+    # fixture in a scratch copy and asserts the gates DETECT it (non-zero exit).
+    # The negative gate in the job above proves the same property for the
+    # sandbox; this job proves it for the CI wiring itself.
+    runs-on: windows-latest
+    timeout-minutes: 15
+    needs: quality-gates
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tamper drill (broken determinism must fail the gate)
+        run: node vendor/node_modules/tsx/dist/cli.mjs rl-engine/testing/negative-gate.ts --drill
+        shell: cmd

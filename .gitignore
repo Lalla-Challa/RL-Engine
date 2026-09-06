@@ -1,0 +1,49 @@
+# ── Dependencies ─────────────────────────────────────────────────────────────
+# root node_modules (regenerable); vendor/node_modules is the COMMITTED offline
+# toolchain — it must never be ignored.
+node_modules/
+!vendor/node_modules/
+!vendor/node_modules/**
+
+# ── Build artifacts ──────────────────────────────────────────────────────────
+# rl-engine package build (regenerate via the dist build; package main/types point here)
+rl-engine/dist/
+# legacy engine-core build outputs
+engine-core/mcp-npm/dist/
+engine-core/mcp-python/dist/
+*.tsbuildinfo
+
+# ── Runtime state (engine sessions, dossiers, traces) ───────────────────────
+# Everything under a data dir is run output: bound-spec store, trajectory,
+# events, signed traces, scores. Traces are per-run HMAC-token material — never commit.
+data/
+data-*/
+# Legacy / parent-workspace runtime dossiers
+**/dossier/
+# MCP golden-loop / pack-pipeline scratch dossiers inside pack dirs
+**/.pipeline-dossier/
+# Agent scratch dirs left by crashed fixture runs
+**/.agent-*/
+
+# ── Red-team runtime artifacts (harness + report.md ARE committed) ──────────
+redteam_dossier_*
+
+# ── Environment / secrets ────────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+
+# ── Logs / OS / editor noise ─────────────────────────────────────────────────
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Local tooling state ──────────────────────────────────────────────────────
+.zcode/plans/
+*.local.json
+
+# Local agent-session configs (machine-specific MCP configs, plans)
+.zcode/

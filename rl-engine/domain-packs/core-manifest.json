@@ -1,0 +1,73 @@
+{
+  "_comment": "SHA-256 of rl-engine/core at the Phase D boundary (after documented gap fixes GAP-1 and GAP-2, before/without any domain-specific edits). Regenerate only when a platform-level gap fix is made and record it in documentedGaps.",
+  "documentedGaps": [
+    {
+      "id": "GAP-1",
+      "title": "Action-space addressing was incomplete (spec §5)",
+      "files": [
+        "types.ts",
+        "validation.ts"
+      ],
+      "preFixHashes": {
+        "types.ts": "cf4291f63dbb2ee85caec42d6e8e96fe4d538baea025dc5c5c28e4dd227656fa",
+        "validation.ts": "3c54f7081d09d5e6715066784e9cdaa0f14b3456f1fc20687b037cbbc55c13fc"
+      },
+      "rationale": "The DSL declared five action-space kinds, but continuous and multiDiscrete had no type discriminator and validateAction only checked type membership — neither kind was addressable or validatable at runtime. Necessary platform abstraction: a type field per kind and a single validateActionAgainstSpace covering all five kinds, shared by the runtime step pipeline and the compiler."
+    },
+    {
+      "id": "GAP-2",
+      "title": "Effect values were literals only (spec §31 subset)",
+      "files": [
+        "state.ts"
+      ],
+      "preFixHashes": {
+        "state.ts": "3c3e7ec321e332ded514c43306031a1a7fe7e61327fa14b4a56d17e26a942deb"
+      },
+      "rationale": "Rules could not express state-dependent magnitudes (e.g. cash -= shares × price in any trading domain; proportional transfers in logistics). Implemented the spec §31 controlled-function subset — declarative $field/$mul/$add/$sub/$div resolution, sandboxed, no eval — as a platform primitive in applyEffect."
+    },
+    {
+      "id": "GAP-3",
+      "title": "The PRNG internal state was inaccessible — mid-episode checkpointing impossible (spec §29/§45)",
+      "files": [
+        "randomness.ts",
+        "types.ts"
+      ],
+      "preFixHashes": {
+        "randomness.ts": "75ac61549e6e5a319472470f2784be62a9f3a00a10d51f5f187eead6328e1079",
+        "types.ts": "995ac5bd757879bfd5941ce2f485b48e44ba1398ff5c8b1016180e4579a50842"
+      },
+      "rationale": "Restoring a snapshot into a fresh process requires resuming the mulberry32 stream exactly; the internal state (a single integer) was private to the closure, so any restore would restart the sequence and diverge from an uninterrupted run. Necessary platform abstraction: snapshotState()/restoreState() on the draw function + RandomService, and optional snapshot()/restore() on the Environment interface. This is the last piece §29 checkpoint-restore needs."
+    },
+    {
+      "id": "GAP-4",
+      "title": "The §34-35 Trainer seam was unusable and the ReplayBuffer was nondeterministic (rl/ layer, outside the hash-checked core set — ledgered here for completeness)",
+      "files": [
+        "rl/trainer.ts",
+        "rl/replayBuffer.ts"
+      ],
+      "preFixHashes": {
+        "rl/trainer.ts": "5d6abb01b26f72f8e842a023885eba688ec47c24d8920cc46b9c000adc1dcc92",
+        "rl/replayBuffer.ts": "21b0191816cd92980f14bba80fc2b2e8433ac94ca054a39ffef8796222741e65"
+      },
+      "rationale": "Trainer.train(policy, episodes) gave a trainer NO environment access, so §34's Trainer-orchestrates-Environment-Policy diagram was unrealizable; the seam now receives an environment factory + episode context. ReplayBuffer.sample() used Math.random, violating the §28 determinism rule; sampling now flows through the seeded RandomService with serializable RNG state. The algorithm remains entirely in the trainer implementation — the core engine is untouched by Phase F."
+    },
+    {
+      "id": "GAP-5",
+      "title": "Declarative effect values were rejected by the set-type pre-flight (red team R2)",
+      "files": [
+        "transitions.ts"
+      ],
+      "preFixHashes": {
+        "transitions.ts": "d397428e64a2ae40cd69c37832909e69871334ff5b6872dd1e3403cb75009976"
+      },
+      "rationale": "The state_compatibility layer validated effect.value against the state schema BEFORE resolving {$field}/{$mul}/{$add}/{$sub}/{$div} descriptors, so any set with a declarative reference failed with e.g. 'set rejected: filing_day: expected integer'. The $-resolution platform primitive (GAP-2) was therefore unusable in set effects at runtime — a legal domain-pack workflow (legal-filing file_motion_rule) could never fire. Fix: resolve the descriptor via resolveEffectValue first, validate the RESOLVED value; unresolvable references remain runtime no-ops per applyEffect semantics. Found by the authorized red team engagement (RedTeamTest/REDTEAM_REPORT.md R2)."
+    }
+  ],
+  "files": {
+    "randomness.ts": "8d44814abc44c3b7d8a6be959022488cea49c986db9bf0a0783029eb75a6c2dc",
+    "state.ts": "42a9ae994db494bb9d7aecae62c2b429f63f3aa74805f7ee6a3e86fa0ec73791",
+    "transitions.ts": "2d225cda0da87a5b83e9c1cec93e18cf62676aa5ccd241b94cd118d37799ae59",
+    "types.ts": "aaa361a6381e82cc6e02808992cd30078dda880d54bc58262da8f41bd85cff60",
+    "validation.ts": "b94dca46728af15e3fee2c3fa46701a96687015f6e5c3535ba149b8e586501c5"
+  }
+}

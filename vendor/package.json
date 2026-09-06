@@ -1,0 +1,10 @@
+{
+  "name": "cmm-cme-vendor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline dependencies vendored for the benchmark (tsx loader). No network needed after clone.",
+  "license": "MIT",
+  "dependencies": {
+    "tsx": "^4.23.13"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "total": 100,
+  "grade": "pass",
+  "phases": {
+    "world_completeness": {
+      "score": 25,
+      "max": 25,
+      "missed": []
+    },
+    "compliance": {
+      "score": 20,
+      "max": 20,
+      "missed": []
+    },
+    "simulation": {
+      "score": 25,
+      "max": 25,
+      "missed": []
+    },
+    "causality": {
+      "score": 15,
+      "max": 15,
+      "missed": []
+    },
+    "dossier": {
+      "score": 15,
+      "max": 15,
+      "missed": []
+    }
+  },
+  "failures": [],
+  "antiBluff": {
+    "echoed": false,
+    "boilerplate": false,
+    "empty": false,
+    "bluff": false
+  },
+  "details": {
+    "provenance": {
+      "format": "rl-trace-v2",
+      "signed": true,
+      "tokenPresent": true,
+      "chain": {
+        "ok": true
+      },
+      "argsCrossCheck": {
+        "checked": 121,
+        "mismatches": 0
+      }
+    },
+    "compileErrors": [],
+    "compileWarnings": [],
+    "replay": {
+      "segments": 2,
+      "mismatched": []
+    },
+    "novelty": {
+      "state": 0.5289256198347108
+    },
+    "causality": {
+      "events": 121,
+      "edges": 233,
+      "maxDepth": 63,
+      "multiParent": 115,
+      "claimedChains": 2,
+      "claimsVerified": true
+    }
+  }
+}

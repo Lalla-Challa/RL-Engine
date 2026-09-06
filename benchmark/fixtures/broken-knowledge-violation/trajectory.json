@@ -1,0 +1,8644 @@
+[
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 99
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 99
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 99,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 98.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 2.95,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 98.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 98.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 98
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 98
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 98
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 97.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 97.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 97.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 97
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 4.95,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 97
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 97,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 6,
+      "battery": 96.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 5.95,
+    "rewardComponents": {
+      "occupancy_reward": 6,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 6,
+      "battery": 96.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 6,
+      "battery": 96.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 7,
+      "battery": 96
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 6.95,
+    "rewardComponents": {
+      "occupancy_reward": 7,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 7,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 7,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 6,
+      "battery": 96
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 6,
+    "rewardComponents": {
+      "occupancy_reward": 6,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 6,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 6,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 6,
+      "battery": 96
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 6,
+    "rewardComponents": {
+      "occupancy_reward": 6,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 6,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 6,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 7,
+      "battery": 95.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 6.95,
+    "rewardComponents": {
+      "occupancy_reward": 7,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 7,
+      "battery": 95.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 7,
+      "battery": 95.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 8,
+      "battery": 95
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 7.95,
+    "rewardComponents": {
+      "occupancy_reward": 8,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 8,
+      "battery": 95
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 8,
+      "battery": 95,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 9,
+      "battery": 94.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 8.95,
+    "rewardComponents": {
+      "occupancy_reward": 9,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 9,
+      "battery": 94.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 9,
+      "battery": 94.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 10,
+      "battery": 94
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 9.95,
+    "rewardComponents": {
+      "occupancy_reward": 10,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 10,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 10,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 9,
+      "battery": 94
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 9,
+    "rewardComponents": {
+      "occupancy_reward": 9,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 9,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 9,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 9,
+      "battery": 94
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 9,
+    "rewardComponents": {
+      "occupancy_reward": 9,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 9,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 9,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 10,
+      "battery": 93.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 9.95,
+    "rewardComponents": {
+      "occupancy_reward": 10,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 10,
+      "battery": 93.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 10,
+      "battery": 93.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 11,
+      "battery": 93
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 10.95,
+    "rewardComponents": {
+      "occupancy_reward": 11,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 11,
+      "battery": 93
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 11,
+      "battery": 93,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 12,
+      "battery": 92.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 11.95,
+    "rewardComponents": {
+      "occupancy_reward": 12,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 12,
+      "battery": 92.5
+    },
+    "terminated": true,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 12,
+      "battery": 92.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 100
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 100
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 100,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      }
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 99.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 99.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 99.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 99
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 99,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 99
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 99
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 99,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 98.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 98.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 98.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 98
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 98
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 98,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 0,
+      "battery": 97.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 0,
+    "rewardComponents": {
+      "occupancy_reward": 0,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 0,
+      "battery": 97.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 0,
+      "battery": 97.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 0.95,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 97
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 97,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 96.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 96.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 96.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 96
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 96
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 96,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 95.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 95.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 95.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 95
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 95,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 95
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 95
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 95,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 94.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 94.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 94.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 94
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 94
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 94,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 93.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 93.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 93.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 93
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 93,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 93
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 93
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 93,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 1,
+      "battery": 92.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 1,
+    "rewardComponents": {
+      "occupancy_reward": 1,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 1,
+      "battery": 92.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 1,
+      "battery": 92.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 1.95,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 2,
+    "rewardComponents": {
+      "occupancy_reward": 2,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 2,
+      "battery": 92
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 2,
+      "battery": 92,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 2.95,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 91.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 91.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 91.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 91.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 91.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 91,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 91,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 91
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 91,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 91
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 91
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 91,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 90.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 90.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 90.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 90
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 90,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 90
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 90
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 90,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 89.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 89.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 89.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 89
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 89,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 3,
+      "battery": 89
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 3,
+    "rewardComponents": {
+      "occupancy_reward": 3,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 3,
+      "battery": 89
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 3,
+      "battery": 89,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 3.95,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 88.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 88.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 88.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 88.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 88.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 4.95,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 88,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 5,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 88,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 5,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 88
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 88,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 4,
+      "battery": 88
+    },
+    "action": {
+      "type": "discharge_patient"
+    },
+    "reward": 4,
+    "rewardComponents": {
+      "occupancy_reward": 4,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 4,
+      "battery": 88
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 4,
+      "battery": 88,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "action": {
+      "type": "admit_patient"
+    },
+    "reward": 4.95,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": -0.05
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 87.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "action": {
+      "type": "inspect_ward"
+    },
+    "reward": 5,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "terminated": false,
+    "truncated": false,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 87.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  },
+  {
+    "observation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "reward": 5,
+    "rewardComponents": {
+      "occupancy_reward": 5,
+      "battery_cost": 0
+    },
+    "nextObservation": {
+      "ward_occupancy": 5,
+      "battery": 87.5
+    },
+    "terminated": false,
+    "truncated": true,
+    "state": {
+      "ward_occupancy": 5,
+      "battery": 87.5,
+      "supplies": 50,
+      "day": 0,
+      "entity:mara": {
+        "location": "Harbor",
+        "energy": "high"
+      },
+      "entity:finn": {
+        "location": "Harbor",
+        "energy": "medium"
+      },
+      "entity:kael": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:lyra": {
+        "location": "Infirmary",
+        "energy": "low"
+      },
+      "entity:orin": {
+        "location": "TownSquare",
+        "energy": "medium"
+      },
+      "entity:rina": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:sorin": {
+        "location": "TownSquare",
+        "energy": "high"
+      },
+      "entity:tessa": {
+        "location": "Inn",
+        "energy": "high"
+      },
+      "entity:ward_a": {
+        "occupancy": 0
+      },
+      "entity:ward_b": {
+        "occupancy": 0
+      },
+      "rel:mara-finn": {
+        "trust": "high"
+      },
+      "rel:finn-kael": {
+        "trust": "medium"
+      },
+      "direction": "north"
+    }
+  }
+]

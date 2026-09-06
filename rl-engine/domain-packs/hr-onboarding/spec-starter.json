@@ -1,0 +1,368 @@
+{
+  "environment": {
+    "id": "hr-onboarding-hub",
+    "version": "1.0.0-starter",
+    "specVersion": "1.0",
+    "description": "Defective starter for HR onboarding. Contains 4 deliberate defects (unknown entity/relationship targets) the agent must find via compileEnvironment and fix."
+  },
+  "state": {
+    "bg_check_status": {
+      "type": "enum",
+      "allowedValues": [
+        "none",
+        "pending",
+        "passed",
+        "failed"
+      ],
+      "default": "none"
+    },
+    "credentials_issued": {
+      "type": "integer",
+      "min": 0,
+      "max": 20,
+      "default": 0
+    },
+    "onboarded_count": {
+      "type": "integer",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    "checks_initiated": {
+      "type": "integer",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    "day": {
+      "type": "integer",
+      "min": 0,
+      "max": 200,
+      "default": 0
+    }
+  },
+  "entities": [
+    {
+      "id": "candidate_1",
+      "type": "person",
+      "attributes": {
+        "role": "candidate"
+      },
+      "state": {
+        "stage": "applied"
+      }
+    },
+    {
+      "id": "hr_officer",
+      "type": "person",
+      "attributes": {
+        "role": "officer"
+      },
+      "state": {
+        "load": 0
+      }
+    },
+    {
+      "id": "hr_dept",
+      "type": "department",
+      "attributes": {
+        "division": "talent"
+      },
+      "state": {
+        "headcount": 0
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "candidate-hr",
+      "source": "candidate_1",
+      "target": "hr_officer",
+      "type": "managed_by",
+      "state": {
+        "standing": "pending"
+      }
+    },
+    {
+      "id": "officer-dept",
+      "source": "hr_officer",
+      "target": "hr_dept",
+      "type": "belongs_to",
+      "state": {
+        "assignments": 0
+      }
+    }
+  ],
+  "actions": [
+    {
+      "kind": "discrete",
+      "actions": [
+        "initiate_check",
+        "complete_check",
+        "issue_credentials",
+        "finalize_onboarding",
+        "audit_hr",
+        "skip_day"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "initiate_check_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "initiate_check"
+        },
+        {
+          "field": "bg_check_status",
+          "op": "eq",
+          "value": "none"
+        }
+      ],
+      "effects": [
+        {
+          "target": "entity:Candidat_X",
+          "field": "state.stage",
+          "op": "set",
+          "value": "backgrounding"
+        }
+      ],
+      "priority": 10,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "complete_check_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "complete_check"
+        },
+        {
+          "field": "bg_check_status",
+          "op": "eq",
+          "value": "pending"
+        }
+      ],
+      "effects": [
+        {
+          "target": "entity:HR_Oficer",
+          "field": "state.load",
+          "op": "set",
+          "value": 5
+        }
+      ],
+      "priority": 9,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "issue_credentials_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "issue_credentials"
+        },
+        {
+          "field": "bg_check_status",
+          "op": "eq",
+          "value": "passed"
+        }
+      ],
+      "effects": [
+        {
+          "target": "rel:Candidat-hr",
+          "field": "state.standing",
+          "op": "set",
+          "value": "credentialed"
+        }
+      ],
+      "priority": 9,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "finalize_onboarding_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "finalize_onboarding"
+        },
+        {
+          "field": "credentials_issued",
+          "op": "gte",
+          "value": 1
+        }
+      ],
+      "effects": [
+        {
+          "target": "entity:HR_Dpet",
+          "field": "state.headcount",
+          "op": "increment",
+          "value": 1
+        }
+      ],
+      "priority": 8,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "audit_hr_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "audit_hr"
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "checks_initiated",
+          "op": "add",
+          "value": 0
+        }
+      ],
+      "priority": 3,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "skip_day_rule",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "eq",
+          "value": "skip_day"
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "day",
+          "op": "add",
+          "value": 0
+        }
+      ],
+      "priority": 3,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "heartbeat",
+      "conditions": [
+        {
+          "field": "action",
+          "op": "exists"
+        }
+      ],
+      "effects": [
+        {
+          "target": "state",
+          "field": "day",
+          "op": "increment",
+          "value": 1
+        }
+      ],
+      "priority": 1,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    }
+  ],
+  "observations": {
+    "fields": [
+      {
+        "field": "bg_check_status",
+        "source": "bg_check_status",
+        "visibility": "public"
+      },
+      {
+        "field": "credentials_issued",
+        "source": "credentials_issued",
+        "visibility": "public"
+      },
+      {
+        "field": "onboarded_count",
+        "source": "onboarded_count",
+        "visibility": "public"
+      },
+      {
+        "field": "day",
+        "source": "day",
+        "visibility": "public"
+      }
+    ],
+    "fullyObservable": false
+  },
+  "rewards": {
+    "components": [
+      {
+        "id": "check_progress",
+        "expression": "state.checks_initiated - prevState.checks_initiated",
+        "weight": 1.5
+      },
+      {
+        "id": "credential_reward",
+        "expression": "state.credentials_issued - prevState.credentials_issued",
+        "weight": 2
+      },
+      {
+        "id": "onboard_reward",
+        "expression": "state.onboarded_count - prevState.onboarded_count",
+        "weight": 10
+      },
+      {
+        "id": "day_cost",
+        "expression": "state.day - prevState.day",
+        "weight": -0.05
+      }
+    ]
+  },
+  "constraints": [
+    {
+      "id": "credentials_require_check",
+      "type": "range",
+      "target": {
+        "field": "credentials_issued",
+        "min": 0,
+        "max": 20
+      },
+      "priority": 1,
+      "satisfied": false
+    }
+  ],
+  "termination": [
+    {
+      "field": "onboarded_count",
+      "op": "gte",
+      "value": 5,
+      "kind": "terminated"
+    },
+    {
+      "field": "",
+      "op": "eq",
+      "value": 0,
+      "kind": "truncated",
+      "maxSteps": 120
+    }
+  ]
+}

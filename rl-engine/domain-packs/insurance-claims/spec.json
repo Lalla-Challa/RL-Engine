@@ -1,0 +1,163 @@
+{
+  "environment": {
+    "id": "insurance-claims-center",
+    "version": "1.0.0",
+    "specVersion": "1.0",
+    "description": "Insurance Claims Processing — synthetic workflow pack. A claim is filed, reviewed, approved or denied, and only an approved claim can be paid out. Exercises enum state progression, range constraints for compliance, and sequential workflow rules. No real insurer or claimant data."
+  },
+  "state": {
+    "claim_status": { "type": "enum", "allowedValues": ["none", "filed", "under_review", "approved", "denied", "paid"], "default": "none" },
+    "reserve": { "type": "float", "min": 0, "max": 100000, "default": 50000 },
+    "review_score": { "type": "integer", "min": 0, "max": 100, "default": 0 },
+    "payout_issued": { "type": "float", "min": 0, "max": 50000, "default": 0 },
+    "claims_filed": { "type": "integer", "min": 0, "max": 100, "default": 0 },
+    "day": { "type": "integer", "min": 0, "max": 200, "default": 0 }
+  },
+  "entities": [
+    { "id": "claimant_1", "type": "person", "attributes": { "role": "claimant" }, "state": { "tier": "standard" } },
+    { "id": "adjuster_1", "type": "person", "attributes": { "role": "adjuster" }, "state": { "load": 0 } },
+    { "id": "insurer_main", "type": "organization", "attributes": { "tier": "primary" }, "state": { "reserve_tier": "standard" } }
+  ],
+  "relationships": [
+    { "id": "claimant-insurer", "source": "claimant_1", "target": "insurer_main", "type": "holds_policy", "state": { "standing": "good" } },
+    { "id": "adjuster-insurer", "source": "adjuster_1", "target": "insurer_main", "type": "employed_by", "state": { "assignments": 0 } }
+  ],
+  "actions": [
+    { "kind": "discrete", "actions": ["file_claim", "review_claim", "approve_claim", "deny_claim", "issue_payout", "audit_reserve"] }
+  ],
+  "rules": [
+    {
+      "id": "file_claim_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "file_claim" },
+        { "field": "claim_status", "op": "eq", "value": "none" }
+      ],
+      "effects": [
+        { "target": "state", "field": "claim_status", "op": "set", "value": "filed" },
+        { "target": "state", "field": "claims_filed", "op": "increment", "value": 1 }
+      ],
+      "priority": 10,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "review_claim_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "review_claim" },
+        { "field": "claim_status", "op": "eq", "value": "filed" }
+      ],
+      "effects": [
+        { "target": "state", "field": "claim_status", "op": "set", "value": "under_review" },
+        { "target": "state", "field": "review_score", "op": "add", "value": 20 }
+      ],
+      "priority": 9,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "approve_claim_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "approve_claim" },
+        { "field": "claim_status", "op": "eq", "value": "under_review" }
+      ],
+      "effects": [
+        { "target": "state", "field": "claim_status", "op": "set", "value": "approved" }
+      ],
+      "priority": 8,
+      "probability": 0.85,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "deny_claim_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "deny_claim" },
+        { "field": "claim_status", "op": "eq", "value": "under_review" }
+      ],
+      "effects": [
+        { "target": "state", "field": "claim_status", "op": "set", "value": "denied" }
+      ],
+      "priority": 7,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "payout_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "issue_payout" },
+        { "field": "claim_status", "op": "eq", "value": "approved" }
+      ],
+      "effects": [
+        { "target": "state", "field": "claim_status", "op": "set", "value": "paid" },
+        { "target": "state", "field": "reserve", "op": "subtract", "value": 5000 },
+        { "target": "state", "field": "payout_issued", "op": "add", "value": 5000 }
+      ],
+      "priority": 10,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "audit_reserve_rule",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "audit_reserve" }
+      ],
+      "effects": [
+        { "target": "state", "field": "review_score", "op": "add", "value": 5 }
+      ],
+      "priority": 3,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "heartbeat",
+      "conditions": [
+        { "field": "action", "op": "exists" }
+      ],
+      "effects": [
+        { "target": "state", "field": "day", "op": "increment", "value": 1 }
+      ],
+      "priority": 1,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    }
+  ],
+  "observations": {
+    "fields": [
+      { "field": "claim_status", "source": "claim_status", "visibility": "public" },
+      { "field": "reserve", "source": "reserve", "visibility": "public" },
+      { "field": "payout_issued", "source": "payout_issued", "visibility": "public" },
+      { "field": "day", "source": "day", "visibility": "public" }
+    ],
+    "fullyObservable": false
+  },
+  "rewards": {
+    "components": [
+      { "id": "filing_progress", "expression": "state.claims_filed - prevState.claims_filed", "weight": 2.0 },
+      { "id": "payout_reward", "expression": "state.payout_issued - prevState.payout_issued", "weight": 0.0005 },
+      { "id": "reserve_penalty", "expression": "state.reserve - prevState.reserve", "weight": 0.0001 },
+      { "id": "day_cost", "expression": "state.day - prevState.day", "weight": -0.05 }
+    ]
+  },
+  "constraints": [
+    { "id": "payout_requires_approval", "type": "range", "target": { "field": "payout_issued", "min": 0, "max": 50000 }, "priority": 1, "satisfied": false },
+    { "id": "reserve_nonnegative", "type": "range", "target": { "field": "reserve", "min": 0, "max": 100000 }, "priority": 1, "satisfied": false }
+  ],
+  "termination": [
+    { "field": "claim_status", "op": "eq", "value": "paid", "kind": "terminated" },
+    { "field": "claim_status", "op": "eq", "value": "denied", "kind": "terminated" },
+    { "field": "", "op": "eq", "value": 0, "kind": "truncated", "maxSteps": 120 }
+  ]
+}

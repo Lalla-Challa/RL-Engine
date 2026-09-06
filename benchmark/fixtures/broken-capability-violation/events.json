@@ -1,0 +1,4196 @@
+[
+  {
+    "id": "evt-1",
+    "timestep": 0,
+    "timestamp": 0,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 100,
+        "to": 99.5
+      }
+    ],
+    "causes": [],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-2",
+    "timestep": 1,
+    "timestamp": 1,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 99.5,
+        "to": 99
+      }
+    ],
+    "causes": [
+      "evt-1"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-3",
+    "timestep": 2,
+    "timestamp": 2,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 99,
+        "to": 98.5
+      }
+    ],
+    "causes": [
+      "evt-2",
+      "evt-1"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-4",
+    "timestep": 3,
+    "timestamp": 3,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 98.5,
+        "to": 98
+      }
+    ],
+    "causes": [
+      "evt-3",
+      "evt-2"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-5",
+    "timestep": 4,
+    "timestamp": 4,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-4",
+      "evt-3"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-6",
+    "timestep": 5,
+    "timestamp": 5,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-7",
+    "timestep": 6,
+    "timestamp": 6,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 98,
+        "to": 97.5
+      }
+    ],
+    "causes": [
+      "evt-5",
+      "evt-4"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-8",
+    "timestep": 7,
+    "timestamp": 7,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 5
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 97.5,
+        "to": 97
+      }
+    ],
+    "causes": [
+      "evt-7",
+      "evt-5"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-9",
+    "timestep": 8,
+    "timestamp": 8,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 5,
+        "to": 6
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 97,
+        "to": 96.5
+      }
+    ],
+    "causes": [
+      "evt-8",
+      "evt-7"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-10",
+    "timestep": 9,
+    "timestamp": 9,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 6,
+        "to": 7
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 96.5,
+        "to": 96
+      }
+    ],
+    "causes": [
+      "evt-9",
+      "evt-8"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-11",
+    "timestep": 10,
+    "timestamp": 10,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 7,
+        "to": 6
+      }
+    ],
+    "causes": [
+      "evt-10",
+      "evt-9"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-12",
+    "timestep": 11,
+    "timestamp": 11,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-6"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-13",
+    "timestep": 12,
+    "timestamp": 12,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 6,
+        "to": 7
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 96,
+        "to": 95.5
+      }
+    ],
+    "causes": [
+      "evt-11",
+      "evt-10"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-14",
+    "timestep": 13,
+    "timestamp": 13,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 7,
+        "to": 8
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 95.5,
+        "to": 95
+      }
+    ],
+    "causes": [
+      "evt-13",
+      "evt-11"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-15",
+    "timestep": 14,
+    "timestamp": 14,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 8,
+        "to": 9
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 95,
+        "to": 94.5
+      }
+    ],
+    "causes": [
+      "evt-14",
+      "evt-13"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-16",
+    "timestep": 15,
+    "timestamp": 15,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 9,
+        "to": 10
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 94.5,
+        "to": 94
+      }
+    ],
+    "causes": [
+      "evt-15",
+      "evt-14"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-17",
+    "timestep": 16,
+    "timestamp": 16,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 10,
+        "to": 9
+      }
+    ],
+    "causes": [
+      "evt-16",
+      "evt-15"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-18",
+    "timestep": 17,
+    "timestamp": 17,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-12",
+      "evt-6"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-19",
+    "timestep": 18,
+    "timestamp": 18,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 9,
+        "to": 10
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 94,
+        "to": 93.5
+      }
+    ],
+    "causes": [
+      "evt-17",
+      "evt-16"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-20",
+    "timestep": 19,
+    "timestamp": 19,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 10,
+        "to": 11
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 93.5,
+        "to": 93
+      }
+    ],
+    "causes": [
+      "evt-19",
+      "evt-17"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-21",
+    "timestep": 20,
+    "timestamp": 20,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 11,
+        "to": 12
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 93,
+        "to": 92.5
+      }
+    ],
+    "causes": [
+      "evt-20",
+      "evt-19"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 2
+    }
+  },
+  {
+    "id": "evt-22",
+    "timestep": 0,
+    "timestamp": 0,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-17",
+      "evt-11"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-23",
+    "timestep": 1,
+    "timestamp": 1,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 100,
+        "to": 99.5
+      }
+    ],
+    "causes": [
+      "evt-21",
+      "evt-20"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-24",
+    "timestep": 2,
+    "timestamp": 2,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-18",
+      "evt-12"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-25",
+    "timestep": 3,
+    "timestamp": 3,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "to": "north"
+      }
+    ],
+    "causes": [],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-26",
+    "timestep": 4,
+    "timestamp": 4,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 0
+      }
+    ],
+    "causes": [
+      "evt-23",
+      "evt-22"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-27",
+    "timestep": 5,
+    "timestamp": 5,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 99.5,
+        "to": 99
+      }
+    ],
+    "causes": [
+      "evt-26",
+      "evt-23"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-28",
+    "timestep": 6,
+    "timestamp": 6,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-24",
+      "evt-18"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-29",
+    "timestep": 7,
+    "timestamp": 7,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-25"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-30",
+    "timestep": 8,
+    "timestamp": 8,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 0
+      }
+    ],
+    "causes": [
+      "evt-27",
+      "evt-26"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-31",
+    "timestep": 9,
+    "timestamp": 9,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 99,
+        "to": 98.5
+      }
+    ],
+    "causes": [
+      "evt-30",
+      "evt-27"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-32",
+    "timestep": 10,
+    "timestamp": 10,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-28",
+      "evt-24"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-33",
+    "timestep": 11,
+    "timestamp": 11,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-29",
+      "evt-25"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-34",
+    "timestep": 12,
+    "timestamp": 12,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 0
+      }
+    ],
+    "causes": [
+      "evt-31",
+      "evt-30"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-35",
+    "timestep": 13,
+    "timestamp": 13,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 98.5,
+        "to": 98
+      }
+    ],
+    "causes": [
+      "evt-34",
+      "evt-31"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-36",
+    "timestep": 14,
+    "timestamp": 14,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-32",
+      "evt-28"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-37",
+    "timestep": 15,
+    "timestamp": 15,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-33",
+      "evt-29"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-38",
+    "timestep": 16,
+    "timestamp": 16,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 0
+      }
+    ],
+    "causes": [
+      "evt-35",
+      "evt-34"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-39",
+    "timestep": 17,
+    "timestamp": 17,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 98,
+        "to": 97.5
+      }
+    ],
+    "causes": [
+      "evt-38",
+      "evt-35"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-40",
+    "timestep": 18,
+    "timestamp": 18,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-36",
+      "evt-32"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-41",
+    "timestep": 19,
+    "timestamp": 19,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-37",
+      "evt-33"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-42",
+    "timestep": 20,
+    "timestamp": 20,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 0
+      }
+    ],
+    "causes": [
+      "evt-39",
+      "evt-38"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-43",
+    "timestep": 21,
+    "timestamp": 21,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 0,
+        "to": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 97.5,
+        "to": 97
+      }
+    ],
+    "causes": [
+      "evt-42",
+      "evt-39"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-44",
+    "timestep": 22,
+    "timestamp": 22,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-40",
+      "evt-36"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-45",
+    "timestep": 23,
+    "timestamp": 23,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-41",
+      "evt-37"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-46",
+    "timestep": 24,
+    "timestamp": 24,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-42",
+      "evt-38"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-47",
+    "timestep": 25,
+    "timestamp": 25,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 97,
+        "to": 96.5
+      }
+    ],
+    "causes": [
+      "evt-43",
+      "evt-42"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-48",
+    "timestep": 26,
+    "timestamp": 26,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-44",
+      "evt-40"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-49",
+    "timestep": 27,
+    "timestamp": 27,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-45",
+      "evt-41"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-50",
+    "timestep": 28,
+    "timestamp": 28,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-47",
+      "evt-46"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-51",
+    "timestep": 29,
+    "timestamp": 29,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 96.5,
+        "to": 96
+      }
+    ],
+    "causes": [
+      "evt-50",
+      "evt-47"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-52",
+    "timestep": 30,
+    "timestamp": 30,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-48",
+      "evt-44"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-53",
+    "timestep": 31,
+    "timestamp": 31,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-49",
+      "evt-45"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-54",
+    "timestep": 32,
+    "timestamp": 32,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-51",
+      "evt-50"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-55",
+    "timestep": 33,
+    "timestamp": 33,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 96,
+        "to": 95.5
+      }
+    ],
+    "causes": [
+      "evt-54",
+      "evt-51"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-56",
+    "timestep": 34,
+    "timestamp": 34,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-52",
+      "evt-48"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-57",
+    "timestep": 35,
+    "timestamp": 35,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-53",
+      "evt-49"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-58",
+    "timestep": 36,
+    "timestamp": 36,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-55",
+      "evt-54"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-59",
+    "timestep": 37,
+    "timestamp": 37,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 95.5,
+        "to": 95
+      }
+    ],
+    "causes": [
+      "evt-58",
+      "evt-55"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-60",
+    "timestep": 38,
+    "timestamp": 38,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-56",
+      "evt-52"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-61",
+    "timestep": 39,
+    "timestamp": 39,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-57",
+      "evt-53"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-62",
+    "timestep": 40,
+    "timestamp": 40,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-59",
+      "evt-58"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-63",
+    "timestep": 41,
+    "timestamp": 41,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 95,
+        "to": 94.5
+      }
+    ],
+    "causes": [
+      "evt-62",
+      "evt-59"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-64",
+    "timestep": 42,
+    "timestamp": 42,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-60",
+      "evt-56"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-65",
+    "timestep": 43,
+    "timestamp": 43,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-61",
+      "evt-57"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-66",
+    "timestep": 44,
+    "timestamp": 44,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-63",
+      "evt-62"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-67",
+    "timestep": 45,
+    "timestamp": 45,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 94.5,
+        "to": 94
+      }
+    ],
+    "causes": [
+      "evt-66",
+      "evt-63"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-68",
+    "timestep": 46,
+    "timestamp": 46,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-64",
+      "evt-60"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-69",
+    "timestep": 47,
+    "timestamp": 47,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-65",
+      "evt-61"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-70",
+    "timestep": 48,
+    "timestamp": 48,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-67",
+      "evt-66"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-71",
+    "timestep": 49,
+    "timestamp": 49,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 94,
+        "to": 93.5
+      }
+    ],
+    "causes": [
+      "evt-70",
+      "evt-67"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-72",
+    "timestep": 50,
+    "timestamp": 50,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-68",
+      "evt-64"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-73",
+    "timestep": 51,
+    "timestamp": 51,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-69",
+      "evt-65"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-74",
+    "timestep": 52,
+    "timestamp": 52,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-71",
+      "evt-70"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-75",
+    "timestep": 53,
+    "timestamp": 53,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 93.5,
+        "to": 93
+      }
+    ],
+    "causes": [
+      "evt-74",
+      "evt-71"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-76",
+    "timestep": 54,
+    "timestamp": 54,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-72",
+      "evt-68"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-77",
+    "timestep": 55,
+    "timestamp": 55,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-73",
+      "evt-69"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-78",
+    "timestep": 56,
+    "timestamp": 56,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-75",
+      "evt-74"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-79",
+    "timestep": 57,
+    "timestamp": 57,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 93,
+        "to": 92.5
+      }
+    ],
+    "causes": [
+      "evt-78",
+      "evt-75"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-80",
+    "timestep": 58,
+    "timestamp": 58,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-76",
+      "evt-72"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-81",
+    "timestep": 59,
+    "timestamp": 59,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-77",
+      "evt-73"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-82",
+    "timestep": 60,
+    "timestamp": 60,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 1
+      }
+    ],
+    "causes": [
+      "evt-79",
+      "evt-78"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-83",
+    "timestep": 61,
+    "timestamp": 61,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 92.5,
+        "to": 92
+      }
+    ],
+    "causes": [
+      "evt-82",
+      "evt-79"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-84",
+    "timestep": 62,
+    "timestamp": 62,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-80",
+      "evt-76"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-85",
+    "timestep": 63,
+    "timestamp": 63,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-81",
+      "evt-77"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-86",
+    "timestep": 64,
+    "timestamp": 64,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-82",
+      "evt-78"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-87",
+    "timestep": 65,
+    "timestamp": 65,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 92,
+        "to": 91.5
+      }
+    ],
+    "causes": [
+      "evt-83",
+      "evt-82"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-88",
+    "timestep": 66,
+    "timestamp": 66,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-84",
+      "evt-80"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-89",
+    "timestep": 67,
+    "timestamp": 67,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-85",
+      "evt-81"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-90",
+    "timestep": 68,
+    "timestamp": 68,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-86",
+      "evt-82"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-91",
+    "timestep": 69,
+    "timestamp": 69,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 91.5,
+        "to": 91
+      }
+    ],
+    "causes": [
+      "evt-87",
+      "evt-83"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-92",
+    "timestep": 70,
+    "timestamp": 70,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-88",
+      "evt-84"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-93",
+    "timestep": 71,
+    "timestamp": 71,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-89",
+      "evt-85"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-94",
+    "timestep": 72,
+    "timestamp": 72,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-91",
+      "evt-90"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-95",
+    "timestep": 73,
+    "timestamp": 73,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 91,
+        "to": 90.5
+      }
+    ],
+    "causes": [
+      "evt-94",
+      "evt-91"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-96",
+    "timestep": 74,
+    "timestamp": 74,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-92",
+      "evt-88"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-97",
+    "timestep": 75,
+    "timestamp": 75,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-93",
+      "evt-89"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-98",
+    "timestep": 76,
+    "timestamp": 76,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-95",
+      "evt-94"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-99",
+    "timestep": 77,
+    "timestamp": 77,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 90.5,
+        "to": 90
+      }
+    ],
+    "causes": [
+      "evt-98",
+      "evt-95"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-100",
+    "timestep": 78,
+    "timestamp": 78,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-96",
+      "evt-92"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-101",
+    "timestep": 79,
+    "timestamp": 79,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-97",
+      "evt-93"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-102",
+    "timestep": 80,
+    "timestamp": 80,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-99",
+      "evt-98"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-103",
+    "timestep": 81,
+    "timestamp": 81,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 90,
+        "to": 89.5
+      }
+    ],
+    "causes": [
+      "evt-102",
+      "evt-99"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-104",
+    "timestep": 82,
+    "timestamp": 82,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-100",
+      "evt-96"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-105",
+    "timestep": 83,
+    "timestamp": 83,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-101",
+      "evt-97"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-106",
+    "timestep": 84,
+    "timestamp": 84,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-103",
+      "evt-102"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-107",
+    "timestep": 85,
+    "timestamp": 85,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 89.5,
+        "to": 89
+      }
+    ],
+    "causes": [
+      "evt-106",
+      "evt-103"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-108",
+    "timestep": 86,
+    "timestamp": 86,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-104",
+      "evt-100"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-109",
+    "timestep": 87,
+    "timestamp": 87,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-105",
+      "evt-101"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-110",
+    "timestep": 88,
+    "timestamp": 88,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 3
+      }
+    ],
+    "causes": [
+      "evt-107",
+      "evt-106"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-111",
+    "timestep": 89,
+    "timestamp": 89,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 3,
+        "to": 4
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 89,
+        "to": 88.5
+      }
+    ],
+    "causes": [
+      "evt-110",
+      "evt-107"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-112",
+    "timestep": 90,
+    "timestamp": 90,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-108",
+      "evt-104"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-113",
+    "timestep": 91,
+    "timestamp": 91,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-109",
+      "evt-105"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-114",
+    "timestep": 92,
+    "timestamp": 92,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-110",
+      "evt-106"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-115",
+    "timestep": 93,
+    "timestamp": 93,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 5
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 88.5,
+        "to": 88
+      }
+    ],
+    "causes": [
+      "evt-111",
+      "evt-110"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-116",
+    "timestep": 94,
+    "timestamp": 94,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-112",
+      "evt-108"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-117",
+    "timestep": 95,
+    "timestamp": 95,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-113",
+      "evt-109"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-118",
+    "timestep": 96,
+    "timestamp": 96,
+    "source": "env",
+    "action": {
+      "type": "discharge_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "decrement",
+        "value": 1
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 5,
+        "to": 4
+      }
+    ],
+    "causes": [
+      "evt-115",
+      "evt-114"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-119",
+    "timestep": 97,
+    "timestamp": 97,
+    "source": "env",
+    "action": {
+      "type": "admit_patient"
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "op": "increment",
+        "value": 1
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "op": "subtract",
+        "value": 0.5
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "ward_occupancy",
+        "from": 4,
+        "to": 5
+      },
+      {
+        "target": "state",
+        "field": "battery",
+        "from": 88,
+        "to": 87.5
+      }
+    ],
+    "causes": [
+      "evt-118",
+      "evt-115"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-120",
+    "timestep": 98,
+    "timestamp": 98,
+    "source": "env",
+    "action": {
+      "type": "inspect_ward"
+    },
+    "effects": [],
+    "stateChanges": [],
+    "causes": [
+      "evt-116",
+      "evt-112"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  },
+  {
+    "id": "evt-121",
+    "timestep": 99,
+    "timestamp": 99,
+    "source": "env",
+    "action": {
+      "type": "move",
+      "params": {
+        "direction": "north"
+      }
+    },
+    "effects": [
+      {
+        "target": "state",
+        "field": "direction",
+        "op": "set",
+        "value": "north"
+      }
+    ],
+    "stateChanges": [
+      {
+        "target": "state",
+        "field": "direction",
+        "from": "north",
+        "to": "north"
+      }
+    ],
+    "causes": [
+      "evt-117",
+      "evt-113"
+    ],
+    "metadata": {
+      "committed": true,
+      "layer": null,
+      "episode": 3
+    }
+  }
+]

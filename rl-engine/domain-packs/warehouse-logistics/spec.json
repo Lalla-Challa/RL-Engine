@@ -1,0 +1,142 @@
+{
+  "environment": {
+    "id": "northgate-warehouse",
+    "version": "1.0.0",
+    "specVersion": "1.0",
+    "description": "Northgate Distribution Center — synthetic warehouse logistics pack. Inventory management across 3 zones, 2 forklifts, pick-order deadlines. Exercises multiDiscrete actions, range constraints, temporal termination, and continuous inventory counters. No real company or personnel data."
+  },
+  "state": {
+    "inventory_a": { "type": "integer", "min": 0, "max": 500, "default": 120 },
+    "inventory_b": { "type": "integer", "min": 0, "max": 500, "default": 80 },
+    "inventory_c": { "type": "integer", "min": 0, "max": 500, "default": 60 },
+    "pick_queue": { "type": "integer", "min": 0, "max": 50, "default": 0 },
+    "forklift_moves": { "type": "integer", "min": 0, "max": 100000, "default": 0 },
+    "orders_filled": { "type": "integer", "min": 0, "max": 100000, "default": 0 },
+    "safety_stock": { "type": "float", "min": 0, "max": 200, "default": 40 },
+    "day": { "type": "integer", "min": 0, "max": 90, "default": 0 }
+  },
+  "entities": [
+    { "id": "forklift_1", "type": "vehicle", "attributes": { "capacity_units": 12, "zone": "A" }, "state": { "battery": 100, "load": 0 } },
+    { "id": "forklift_2", "type": "vehicle", "attributes": { "capacity_units": 8, "zone": "B" }, "state": { "battery": 100, "load": 0 } },
+    { "id": "zone_a", "type": "location", "attributes": { "aisles": 6 }, "state": { "congestion": "clear" } },
+    { "id": "zone_b", "type": "location", "attributes": { "aisles": 4 }, "state": { "congestion": "clear" } },
+    { "id": "zone_c", "type": "location", "attributes": { "aisles": 4 }, "state": { "congestion": "clear" } },
+    { "id": "dispatch", "type": "location", "attributes": { "docks": 3 }, "state": { "queue": 0 } }
+  ],
+  "relationships": [
+    { "id": "fl1-zonea", "source": "forklift_1", "target": "zone_a", "type": "home_zone", "state": { "assignments": 0 } },
+    { "id": "fl2-zoneb", "source": "forklift_2", "target": "zone_b", "type": "home_zone", "state": { "assignments": 0 } }
+  ],
+  "actions": [
+    { "kind": "discrete", "actions": ["receive_shipment", "dispatch_order", "cycle_count", "idle"] },
+    {
+      "kind": "multiDiscrete",
+      "type": "move_units",
+      "dims": [
+        { "field": "from_zone", "values": ["A", "B", "C"] },
+        { "field": "to_zone", "values": ["A", "B", "C", "DISPATCH"] },
+        { "field": "quantity", "values": [1, 5, 10, 20] }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "receive",
+      "conditions": [{ "field": "action", "op": "eq", "value": "receive_shipment" }],
+      "effects": [
+        { "target": "state", "field": "inventory_a", "op": "add", "value": 30 },
+        { "target": "state", "field": "inventory_b", "op": "add", "value": 20 },
+        { "target": "state", "field": "day", "op": "increment", "value": 1 }
+      ],
+      "priority": 10,
+      "probability": 0.9,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "move",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "move_units" },
+        { "field": "quantity", "op": "gte", "value": 1 }
+      ],
+      "effects": [
+        { "target": "state", "field": "forklift_moves", "op": "increment", "value": 1 },
+        { "target": "state", "field": "inventory_c", "op": "subtract", "value": 1 }
+      ],
+      "priority": 8,
+      "probability": 0.95,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "dispatch",
+      "conditions": [
+        { "field": "action", "op": "eq", "value": "dispatch_order" },
+        { "field": "inventory_a", "op": "gte", "value": 10 }
+      ],
+      "effects": [
+        { "target": "state", "field": "inventory_a", "op": "subtract", "value": 10 },
+        { "target": "state", "field": "orders_filled", "op": "increment", "value": 1 }
+      ],
+      "priority": 9,
+      "probability": 0.85,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "cycle_count",
+      "conditions": [{ "field": "action", "op": "eq", "value": "cycle_count" }],
+      "effects": [
+        { "target": "state", "field": "day", "op": "increment", "value": 1 }
+      ],
+      "priority": 5,
+      "probability": 1,
+      "enabled": true,
+      "cooldown": 0,
+      "scope": "global"
+    },
+    {
+      "id": "congestion",
+      "conditions": [
+        { "field": "forklift_moves", "op": "gt", "value": 0 },
+        { "field": "pick_queue", "op": "gt", "value": 3 }
+      ],
+      "effects": [
+        { "target": "entity:zone_a", "field": "state.congestion", "op": "set", "value": "busy" }
+      ],
+      "priority": 4,
+      "probability": 0.4,
+      "enabled": true,
+      "cooldown": 2,
+      "scope": "global"
+    }
+  ],
+  "observations": {
+    "fields": [
+      { "field": "inventory", "source": "inventory_a", "visibility": "public" },
+      { "field": "pick_queue", "source": "pick_queue", "visibility": "public" },
+      { "field": "day", "source": "day", "visibility": "public" }
+    ],
+    "fullyObservable": false
+  },
+  "rewards": {
+    "components": [
+      { "id": "throughput", "expression": "state.orders_filled - prevState.orders_filled", "weight": 2.0 },
+      { "id": "movement_effort", "expression": "state.forklift_moves - prevState.forklift_moves", "weight": -0.1 },
+      { "id": "stock_penalty", "expression": "state.inventory_a - prevState.inventory_a", "weight": -0.01 }
+    ]
+  },
+  "constraints": [
+    { "id": "inventory_a_bounds", "type": "range", "target": { "field": "inventory_a", "min": 0, "max": 500 }, "priority": 1, "satisfied": false },
+    { "id": "inventory_b_bounds", "type": "range", "target": { "field": "inventory_b", "min": 0, "max": 500 }, "priority": 1, "satisfied": false },
+    { "id": "inventory_c_bounds", "type": "range", "target": { "field": "inventory_c", "min": 0, "max": 500 }, "priority": 1, "satisfied": false },
+    { "id": "safety_stock_floor", "type": "range", "target": { "field": "safety_stock", "min": 0, "max": 200 }, "priority": 1, "satisfied": false }
+  ],
+  "termination": [
+    { "field": "", "op": "eq", "value": 0, "kind": "truncated", "maxSteps": 120 },
+    { "field": "orders_filled", "op": "gte", "value": 40, "kind": "terminated" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Harmon Creek Regional Hospital — Regulated Facility Commissioning",
+  "version": "2.0.0",
+  "engine": "rl-engine (generic RL environment engine, spec v1.0 §1-47)",
+  "description": "Synthetic hospital commissioning on the generic engine. The starter spec contains 4 deliberate compiler-level defects (unresolvable effect targets) the agent must detect via compileEnvironment and fix before stepping.",
+  "seeds": {
+    "default": 42
+  },
+  "files": {
+    "starterSpec": "spec.json",
+    "referenceSpec": "../../rl-engine/domain-packs/harmon-creek/spec.json"
+  },
+  "deliberateDefects": 4,
+  "requirements": {
+    "minStepCalls": 100,
+    "minTrajectoryLength": 40,
+    "requireTermination": true,
+    "requireInvalidActionRejected": true,
+    "requireRewardComponents": true,
+    "requireReplay": true
+  },
+  "starterHash": "1bd88ba134d36132d43d86c0a97c6395455dac43ade7a0e35acf038e2232a65e"
+}

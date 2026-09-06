@@ -1,0 +1,88 @@
+{
+  "spec": "harmon-creek-hospital@3.0.0-hard",
+  "episodes": 240,
+  "validation": [
+    {
+      "episode": 12,
+      "mean": -1092.1
+    },
+    {
+      "episode": 24,
+      "mean": -1332.5
+    },
+    {
+      "episode": 36,
+      "mean": -1134.2
+    },
+    {
+      "episode": 48,
+      "mean": -1178.5
+    },
+    {
+      "episode": 60,
+      "mean": 85.77499999999999
+    },
+    {
+      "episode": 72,
+      "mean": -1074.5
+    },
+    {
+      "episode": 84,
+      "mean": -1074.5
+    },
+    {
+      "episode": 96,
+      "mean": -1074.5
+    },
+    {
+      "episode": 108,
+      "mean": -1074.5
+    },
+    {
+      "episode": 120,
+      "mean": -1074.5
+    },
+    {
+      "episode": 132,
+      "mean": -1178.5
+    },
+    {
+      "episode": 144,
+      "mean": -1332.5
+    },
+    {
+      "episode": 156,
+      "mean": -1074.5
+    },
+    {
+      "episode": 168,
+      "mean": -1074.5
+    },
+    {
+      "episode": 180,
+      "mean": -1074.5
+    },
+    {
+      "episode": 192,
+      "mean": -1074.5
+    },
+    {
+      "episode": 204,
+      "mean": -1074.5
+    },
+    {
+      "episode": 216,
+      "mean": -1074.5
+    },
+    {
+      "episode": 228,
+      "mean": 85.77499999999999
+    },
+    {
+      "episode": 240,
+      "mean": 85.77499999999999
+    }
+  ],
+  "trainedMean": 90.4,
+  "baselineMean": -1068.6000000000001
+}

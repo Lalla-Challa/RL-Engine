@@ -1,0 +1,155 @@
+{
+  "format": "rl-trace-v2",
+  "algorithm": "HMAC-SHA256",
+  "signed": true,
+  "entries": [
+    {
+      "index": 1,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 1,
+      "digest": "345020589db3b8346beb0507f9386f7c05a8f9708c80c33f143e2da4e11d01e3"
+    },
+    {
+      "index": 2,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 2,
+      "digest": "f328d8464958f3fdb5791d4176bced0ece023beb4da57764b746ee85d624df48"
+    },
+    {
+      "index": 3,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 3,
+      "digest": "0c80a26aa99c4e94caf94fccc4b4961e1ced9119b8afd1d9a980a800a18c1781"
+    },
+    {
+      "index": 4,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 4,
+      "digest": "0ef3f4c65e8e7aed8168b63f05195bda6cc5b763022da39e4aa8c022ac2e5a52"
+    },
+    {
+      "index": 5,
+      "tool": "env_step",
+      "argsHash": "6006e50687184022",
+      "stepIndex": 5,
+      "digest": "7366f13c7c2446e38503462a3242b66495e36c701b9869fec4e0b560726dce61"
+    },
+    {
+      "index": 6,
+      "tool": "env_step",
+      "argsHash": "03ff1c71eb6dac7d",
+      "stepIndex": 6,
+      "digest": "96059a5e0a00e77d7bd002936a7d49d1a64ac18d3310736f386db0847243c04a"
+    },
+    {
+      "index": 7,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 7,
+      "digest": "5346a2fbcaeed71c69f0d9f3347bf35e87230371205ffb8a39435af499ec7cbb"
+    },
+    {
+      "index": 8,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 8,
+      "digest": "fe01f9a97388dd3628d0b676b0dd0c66221cc6a686ef2fffee5da1dd5c4f7e66"
+    },
+    {
+      "index": 9,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 9,
+      "digest": "998cbb596b54c92b448bdba5a2b64665a25ba42ee73e496c0dd9bdb2bad2c0d6"
+    },
+    {
+      "index": 10,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 10,
+      "digest": "052d132c9bc283ecf3dce7d7b747c8df4169dd4d83ecd5ae6e514dc79329be20"
+    },
+    {
+      "index": 11,
+      "tool": "env_step",
+      "argsHash": "6006e50687184022",
+      "stepIndex": 11,
+      "digest": "e5d51ca235ccffc330922608aa618f2362b704ff8f47ec9b8cf25e16306d2cdb"
+    },
+    {
+      "index": 12,
+      "tool": "env_step",
+      "argsHash": "03ff1c71eb6dac7d",
+      "stepIndex": 12,
+      "digest": "acca01be8516a3c99c86f1a3ec035197069cff66651ee511efbb5575282a41cb"
+    },
+    {
+      "index": 13,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 13,
+      "digest": "c87e198a2f9eb84ed40a30b023f1c6c0253a35f8f831fee7eee2bb3c6af5bd7a"
+    },
+    {
+      "index": 14,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 14,
+      "digest": "f5cba6b2cf79e11aa92ddbc3c1d44b8070fe1d518e13dfce338fba9b5bfc02fe"
+    },
+    {
+      "index": 15,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 15,
+      "digest": "dab9140d7b1691a186558df4935a102ef744c2d8496f8b95bce1e2108aa9aaaa"
+    },
+    {
+      "index": 16,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 16,
+      "digest": "1cda692bbd200ba1807a6a66badd2f345782cf0cc100c00d32f3633e4f216554"
+    },
+    {
+      "index": 17,
+      "tool": "env_step",
+      "argsHash": "6006e50687184022",
+      "stepIndex": 17,
+      "digest": "369d280502982fe853e8a046621ca22776add89811583e5d0743b7e49a63c076"
+    },
+    {
+      "index": 18,
+      "tool": "env_step",
+      "argsHash": "03ff1c71eb6dac7d",
+      "stepIndex": 18,
+      "digest": "d7e5ddeeb3ecdffc4d70da51c4d593af8011ba625719bc484f599d16d1813b40"
+    },
+    {
+      "index": 19,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 19,
+      "digest": "b7b847769f61889ca9a3f1aa7e7b064b2ab30a7e37caadc1f96fbfabd24bccb1"
+    },
+    {
+      "index": 20,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 20,
+      "digest": "b0e04406c3da79c65da1439db90806d1d755c6563dfb50ae16b6e806f1cb20b7"
+    },
+    {
+      "index": 21,
+      "tool": "env_step",
+      "argsHash": "6922d321005b989a",
+      "stepIndex": 21,
+      "digest": "4bbe4932cf09104f4babdc9c6312f3a4bc5f3686de7e1231da95b887d2bc9ae0"
+    }
+  ],
+  "chainHead": "4bbe4932cf09104f4babdc9c6312f3a4bc5f3686de7e1231da95b887d2bc9ae0"
+}
